@@ -1,0 +1,217 @@
+/* ====== ESTILOS ELEGANTES CASA ATOS ====== */
+
+/* ====== BOTÃO FECHAR MODAL DCEC ====== */
+@media (max-width: 700px) {
+  .dcec-close-global {
+    top: 0.5rem !important;
+    right: 0.5rem !important;
+    width: 2.2rem !important;
+    height: 2.2rem !important;
+    font-size: 1.3rem !important;
+  }
+}
+.dcec-close-global {
+  position: absolute !important;
+  top: 1.25rem !important;
+  right: 1.25rem !important;
+  z-index: 100;
+  background: #facc15 !important;
+  color: #1a1a1a !important;
+  width: 2.8rem !important;
+  height: 2.8rem !important;
+  font-size: 2rem !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 4px 24px #ffd70033, 0 2px 8px #0002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  border: none;
+  outline: none;
+}
+.dcec-close-global:hover {
+  background: #fde047 !important;
+  color: #000 !important;
+  box-shadow: 0 6px 36px #ffd70099, 0 2px 8px #0003;
+}
+
+/* ====== COLUNAS DE ENDEREÇOS DCEC ====== */
+.dcec-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.dcec-section-group {
+  width: 50%;
+  min-width: 260px;
+}
+.dcec-section-label {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fde047;
+  margin-bottom: 0.7rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 8px #0002;
+}
+
+/* ====== CARDS DE ENDEREÇOS DCEC ====== */
+.dcec-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.dcec-card {
+  background: #23272e;
+  border-radius: 1.1rem;
+  box-shadow: 0 2px 12px #ffd70022, 0 1px 4px #0002;
+  padding: 1.1rem 1.2rem 0.9rem 1.2rem;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  border-left: 4px solid #facc15;
+  transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.dcec-card:hover {
+  box-shadow: 0 6px 32px #ffd70055, 0 2px 8px #0003;
+  border-left: 4px solid #fde047;
+  background: #2d3748;
+}
+.dcec-nome {
+  font-weight: bold;
+  color: #fde047;
+  font-size: 1.08rem;
+  margin-bottom: 0.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.dcec-endereco, .dcec-horario, .dcec-contato {
+  font-size: 0.98rem;
+  color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.dcec-endereco {
+  color: #facc15;
+  font-weight: 500;
+}
+.dcec-horario {
+  color: #fde047;
+}
+.dcec-contato {
+  color: #fffde4;
+  font-size: 0.93rem;
+}
+
+/* ====== GRID DE EVENTOS RESPONSIVO ====== */
+@media (min-width: 768px) {
+  #eventos .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  #eventos .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+#eventos .bg-gray-800 {
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px #ffd70022, 0 1px 4px #0002;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+#eventos .bg-gray-800:hover {
+  box-shadow: 0 8px 36px #ffd70055, 0 2px 8px #0003;
+  background: #23272e;
+}
+
+/* ====== UTILITÁRIO: BORDA ARREDONDADA ====== */
+.rounded-element {
+  border-radius: 1.1rem !important;
+}
+
+/* ====== SCROLLBAR MODAL DCEC ====== */
+#dcec-info::-webkit-scrollbar {
+  width: 10px;
+}
+#dcec-info::-webkit-scrollbar-thumb {
+  background: #facc15;
+  border-radius: 8px;
+}
+#dcec-info::-webkit-scrollbar-track {
+  background: #23272e;
+  border-radius: 8px;
+}
+#dcec-info strong {
+  position: sticky;
+  top: 0;
+  background: #23272e;
+  z-index: 10;
+  padding: 0.7rem 0 0.7rem 0;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px #ffd70022, 0 1px 4px #0002;
+}
+
+/* ====== MODAL CONTRIBUA (RESPONSIVO) ====== */
+@media (max-width: 500px) {
+  #contribua-modal .p-8 {
+    padding: 1.2rem !important;
+  }
+}
+
+body {
+  background-color: #1a202c !important;
+}
+.bg-black,
+.bg-white,
+.bg-gray-900,
+.bg-gray-800 {
+  background-color: #1a202c !important;
+}
+
+/* Carousel Dots - Hero Section */
+.carousel-dots {
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  z-index: 20;
+}
+.carousel-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff8;
+  border: 2px solid #ffd700;
+  box-shadow: 0 2px 8px #0003;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s, transform 0.2s;
+  margin: 0 2px;
+}
+.carousel-dot.active {
+  background: #ffd700;
+  border-color: #fff;
+  transform: scale(1.18);
+  box-shadow: 0 0 0 4px #ffd70044;
+}
+
+@media (max-width: 640px) {
+  .carousel-dots {
+    bottom: 16px;
+    gap: 0.5rem;
+  }
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+  }
+}

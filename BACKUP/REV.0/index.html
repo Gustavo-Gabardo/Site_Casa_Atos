@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igreja Casa Atos</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones de redes sociais e hambúrguer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="bg-gradient-to-r from-black via-black via-70% to-yellow-400 text-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex flex-col md:flex-row md:justify-between md:items-center items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2 mb-4 md:mb-0 md:mr-8">
+                <img src="logo_2-removebg-preview.png" alt="Logo Igreja Casa Atos" class="h-12 w-auto shadow-md">
+                <span class="text-3xl font-bold tracking-tight text-yellow-400">Casa Atos</span>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden mb-2 md:mb-0">
+                <button id="mobile-menu-button" class="text-yellow-400 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex space-x-8 text-lg font-medium items-center justify-center">
+                <li><a href="#home" class="hover:text-yellow-200 transition duration-300 flex items-center gap-2"><i class="fas fa-home"></i> Página Inicial</a></li>
+                <li><a href="#sobre" class="hover:text-yellow-200 transition duration-300 flex items-center gap-2"><i class="fas fa-users"></i> Sobre Nós</a></li>
+                <li><a href="#pilares" class="hover:text-yellow-200 transition duration-300 flex items-center gap-2"><i class="fas fa-gem"></i> Pilares</a></li>
+                <li><a href="#eventos" class="hover:text-yellow-200 transition duration-300 flex items-center gap-2"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
+                <li><a href="#contato" class="hover:text-yellow-200 transition duration-300 flex items-center gap-2"><i class="fas fa-envelope"></i> Contato</a></li>
+                <li><a href="#" id="contribua-btn" class="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-black rounded-lg shadow-md transition duration-300 rounded-element flex items-center gap-2"><i class="fas fa-hand-holding-heart"></i> Contribua</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-900 py-4">
+            <ul class="flex flex-col items-center space-y-4 text-lg">
+                <li><a href="#home" class="block py-2 hover:bg-gray-800 w-full text-center transition duration-300 text-white">Página Inicial</a></li>
+                <li><a href="#sobre" class="block py-2 hover:bg-gray-800 w-full text-center transition duration-300 text-white">Sobre Nós</a></li>
+                <li><a href="#ministerios" class="block py-2 hover:bg-gray-800 w-full text-center transition duration-300 text-white">Ministérios</a></li>
+                <li><a href="#eventos" class="block py-2 hover:bg-gray-800 w-full text-center transition duration-300 text-white">Eventos</a></li>
+                <li><a href="#contato" class="block py-2 hover:bg-gray-800 w-full text-center transition duration-300 text-white">Contato</a></li>
+                <li><a href="#" class="block py-2 bg-yellow-500 hover:bg-yellow-600 text-black rounded-lg shadow-md w-3/4 text-center mx-auto rounded-element">Contribua</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section text-white flex items-center justify-center text-center section-padding min-h-[700px] relative overflow-hidden mb-20">
+            <div class="absolute inset-0 z-0">
+                <!-- Carousel container -->
+                <div id="carousel-images" class="w-full h-full absolute inset-0 flex items-center justify-center">
+                    <img src="WhatsApp Image 2025-06-09 at 09.27.05.jpeg" alt="Foto 1" class="carousel-img object-cover w-full h-full absolute inset-0 opacity-100 transition-opacity duration-1000" style="object-position: center;" />
+                    <img src="WhatsApp Image 2025-06-09 at 17.41.43.jpeg" alt="Foto 2" class="carousel-img object-cover w-full h-full absolute inset-0 opacity-0 transition-opacity duration-1000" style="object-position: center;" />
+                    <img src="WhatsApp Image 2025-06-09 at 17.42.54.jpeg" alt="Foto 3" class="carousel-img object-cover w-full h-full absolute inset-0 opacity-0 transition-opacity duration-1000" style="object-position: center;" />
+                    <img src="WhatsApp Image 2025-06-09 at 17.43.08.jpeg" alt="Foto 4" class="carousel-img object-cover w-full h-full absolute inset-0 opacity-0 transition-opacity duration-1000" style="object-position: center;" />
+                    <div class="hero-overlay absolute inset-0"></div>
+                    <!-- Carousel dots -->
+                    <div class="carousel-dots"></div>
+                </div>
+            </div>
+            <div class="relative z-10 px-4">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-4 animate-fade-in-down text-yellow-400 drop-shadow-lg">
+                    Bem-vindo à Igreja Casa Atos
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up">
+                    Vem ser igreja junto com a gente.
+                </p>
+            </div>
+        </section>
+        <!-- Fim Hero Section -->
+
+        <!-- About Us Section -->
+        <section id="sobre" class="bg-gray-900 text-white section-padding mt-20 mb-20">
+            <div class="container mx-auto px-4 flex flex-col items-center justify-center text-center max-w-2xl">
+                <h2 class="text-4xl font-bold text-yellow-400 mb-6">
+                    Nossa Missão e Visão
+                </h2>
+                <p class="text-xl md:text-2xl font-semibold text-yellow-300 mb-4" style="color:#e5e7eb;">
+                    Fazer pessoas comuns em discípulos extraordinários de Cristo.
+                </p>
+                <p class="text-lg leading-relaxed mb-0" style="color:#e5e7eb;">
+                    <span class="font-bold text-yellow-400">Atos 5:42 (NVI):</span> "Todos os dias, no templo e de casa em casa, não deixavam de ensinar e anunciar que Jesus é o Cristo."
+                </p>
+            </div>
+        </section>
+
+        <!-- Ministries Section -->
+        <section id="ministerios" class="bg-black text-white section-padding mt-20 mb-20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold text-yellow-400 mb-6">Nossos Pilares de Ministério</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Pilar: Amor -->
+                    <div class="flex flex-col items-center text-center gap-4 py-4">
+                        <div class="text-yellow-400 mb-2">
+                            <i class="fas fa-heart text-4xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Amor</h3>
+                        <p class="text-md leading-relaxed text-gray-200">João 13:34-35: "Um novo mandamento vos dou: Que vos ameis uns aos outros; como eu vos amei a vós, que também vós uns aos outros vos ameis. Nisto todos conhecerão que sois meus discípulos, se vos amardes uns aos outros."</p>
+                    </div>
+                    <!-- Pilar: Servir -->
+                    <div class="flex flex-col items-center text-center gap-4 py-4">
+                        <div class="text-yellow-400 mb-2">
+                            <i class="fas fa-hands-helping text-4xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Servir</h3>
+                        <p class="text-md leading-relaxed text-gray-200">Marcos 10:43-45: "Mas entre vós não será assim; antes, qualquer que, entre vós, quiser ser grande será vosso serviçal. E qualquer que, dentre vós, quiser ser o primeiro será servo de todos. Porque o Filho do Homem também não veio para ser servido, mas para servir e dar a sua vida em resgate de muitos."</p>
+                    </div>
+                    <!-- Pilar: Cuidado -->
+                    <div class="flex flex-col items-center text-center gap-4 py-4">
+                        <div class="text-yellow-400 mb-2">
+                            <i class="fas fa-user-shield text-4xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Cuidado</h3>
+                        <p class="text-md leading-relaxed text-gray-200">1 Timóteo 5:8: "Mas, se alguém não tem cuidado dos seus e principalmente dos da sua família, negou a fé e é pior do que o infiel."</p>
+                    </div>
+                    <!-- Pilar: Fé -->
+                    <div class="flex flex-col items-center text-center gap-4 py-4">
+                        <div class="text-yellow-400 mb-2">
+                            <i class="fas fa-praying-hands text-4xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Fé</h3>
+                        <p class="text-md leading-relaxed text-gray-200">Hebreus 11:6: "Ora, sem fé é impossível agradar-lhe, porque é necessário que aquele que se aproxima de Deus creia que ele existe e que é galardoador dos que o buscam."</p>
+                    </div>
+                    <!-- Pilar: Fidelidade -->
+                    <div class="flex flex-col items-center text-center gap-4 py-4">
+                        <div class="text-yellow-400 mb-2">
+                            <i class="fas fa-seedling text-4xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Fidelidade</h3>
+                        <p class="text-md leading-relaxed text-gray-200">Permanecemos fiéis a Deus, à missão e uns aos outros.</p>
+                    </div>
+                    <!-- Pilar: Discipulado -->
+                    <div class="flex flex-col items-center text-center gap-4 py-4">
+                        <div class="text-yellow-400 mb-2">
+                            <i class="fas fa-handshake text-4xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Discipulado</h3>
+                        <p class="text-md leading-relaxed text-gray-200">Mateus 28:19,20 Portanto ide, fazei discípulos de todas as nações, batizando-os em nome do Pai, e do Filho, e do Espírito Santo;
+Ensinando-os a guardar todas as coisas que eu vos tenho mandado; e eis que eu estou convosco todos os dias, até a consumação do mundo. Amém. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Exclusiva: Culto de Celebração -->
+        <section id="culto-celebracao" class="py-20 mt-20 mb-20">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 flex justify-center mb-8 md:mb-0">
+                    <img src="culto domingo.jpeg" alt="Culto de Celebração" class="rounded-2xl shadow-xl w-full max-w-md object-cover border-2 border-yellow-300">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-5xl font-extrabold mb-6 text-yellow-500 drop-shadow-sm">Culto de Celebração</h2>
+                    <div class="flex flex-col gap-2 mb-6">
+                        <span class="inline-flex items-center justify-center md:justify-start text-2xl font-bold text-yellow-500"><i class="fas fa-calendar-alt mr-2"></i>Domingos, 18h30</span>
+                        <span class="inline-flex items-center justify-center md:justify-start text-lg font-semibold text-yellow-500"><i class="fas fa-map-marker-alt mr-2"></i>R. Menino Jesus, 364 - Parque da Fonte, SJP</span>
+                    </div>
+                    <p class="text-lg leading-relaxed font-medium text-white" style="text-shadow:0 1px 8px #0002;">
+                        Um ambiente de fé, alegria e comunhão para toda a família.<br>
+                        Venha ser igreja junto com a gente!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Fim Seção Exclusiva: Culto de Celebração -->
+        
+        <!-- Events Section -->
+        <section id="eventos" class="bg-gray-900 text-white section-padding mt-20 mb-20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold text-yellow-400 mb-6">Nossos Eventos</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Event Card 2 - De Casa em Casa -->
+                    <div class="bg-gray-800 p-6 rounded-element shadow-md flex flex-col h-full">
+                        <div class="relative w-full h-56 mb-4 overflow-hidden rounded-element">
+                            <img src="de casa em casa.jpeg" alt="De Casa em Casa" class="w-full h-full object-cover object-center scale-105 brightness-110 contrast-110 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-yellow-400 mb-2">De Casa em Casa</h3>
+                        <p class="text-gray-300 mb-2">Todas as Quartas-feiras e Sábados nos lares.</p>
+                        <p class="text-gray-400 text-sm mb-4">Momentos de comunhão e estudo bíblico, experimentando o verdadeiro sentido de família e pertencimento.</p>
+                        <button onclick="toggleDcecInfo()" class="mt-auto px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-black font-medium rounded-lg transition duration-300 rounded-element">Saber Endereços</button>
+                        <div id="dcec-info" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80">
+                            <div class="bg-gray-900 p-6 rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative border-4 border-yellow-500">
+                                <button onclick="toggleDcecInfo()" class="absolute top-4 right-4 text-yellow-400 hover:text-yellow-200 text-2xl font-bold focus:outline-none" aria-label="Fechar">&times;</button>
+                                <strong class="block text-yellow-400 mb-6 text-2xl text-center">Não fique de fora do DCEC, procure um e faça parte da família!</strong>
+                                <div class="dcec-columns flex flex-col md:flex-row gap-8">
+                                  <div class="dcec-section-group flex-1 min-w-[260px]">
+                                    <div class="dcec-section-label text-xl font-bold text-yellow-400 mb-4 text-center md:text-left">Quartas-feiras</div>
+                                    <div class="dcec-cards flex flex-col gap-4">
+                                      <!-- Card: Cristian e Letycia -->
+                                      <div class="dcec-card bg-gray-800 rounded-lg p-4 mb-2 shadow">
+                                        <div class="dcec-nome font-semibold text-yellow-300 mb-1"><i class="fas fa-home mr-1"></i> Cristian e Letycia</div>
+                                        <div class="dcec-endereco text-gray-200 text-sm mb-1"><i class="fas fa-map-marker-alt mr-1"></i> Capitao Jonas mateus de almeida 390A - Borda do Campo</div>
+                                        <div class="dcec-horario text-yellow-400 text-xs mb-1"><i class="fas fa-clock mr-1"></i> Quarta às 20h</div>
+                                        <div class="dcec-contato text-gray-400 text-xs"><i class="fas fa-phone-alt mr-1"></i> Cris: 47 99730-5060 &bull; Lê: 41 99721-0232</div>
+                                      </div>
+                                      <div class="dcec-card bg-gray-800 rounded-lg p-4 mb-2 shadow">
+                                        <div class="dcec-nome font-semibold text-yellow-300 mb-1"><i class="fas fa-home mr-1"></i> Gustavo e Débora</div>
+                                        <div class="dcec-endereco text-gray-200 text-sm mb-1"><i class="fas fa-map-marker-alt mr-1"></i> Rua menino Jesus 335 - Parque da Fonte</div>
+                                        <div class="dcec-horario text-yellow-400 text-xs mb-1"><i class="fas fa-clock mr-1"></i> Quarta às 20h</div>
+                                        <div class="dcec-contato text-gray-400 text-xs"><i class="fas fa-phone-alt mr-1"></i> Gustavo: 41 99895-6164 &bull; Débora: 41 99910-5614</div>
+                                      </div>
+                                      <div class="dcec-card bg-gray-800 rounded-lg p-4 mb-2 shadow">
+                                        <div class="dcec-nome font-semibold text-yellow-300 mb-1"><i class="fas fa-home mr-1"></i> Vinicius e Victória</div>
+                                        <div class="dcec-endereco text-gray-200 text-sm mb-1"><i class="fas fa-map-marker-alt mr-1"></i> Av. Rui Barbosa 5028, Afonso Pena <span class='italic text-xs'>(Barbearia Veteran - Acesso pelas escadas laterais, sala 4)</span></div>
+                                        <div class="dcec-horario text-yellow-400 text-xs mb-1"><i class="fas fa-clock mr-1"></i> Quarta-feira, 20h</div>
+                                        <div class="dcec-contato text-gray-400 text-xs"><i class="fas fa-phone-alt mr-1"></i> Victória: (47)99793-5615 &bull; Vinicius: (41)99728-2874</div>
+                                      </div>
+                                      <div class="dcec-card bg-gray-800 rounded-lg p-4 mb-2 shadow">
+                                        <div class="dcec-nome font-semibold text-yellow-300 mb-1"><i class="fas fa-home mr-1"></i> Ronaldo e Sônia</div>
+                                        <div class="dcec-endereco text-gray-200 text-sm mb-1"><i class="fas fa-map-marker-alt mr-1"></i> Rua Tereza Nester, 113 <span class='italic text-xs'>Afonso Pena - Cj Urano (Na escola Renovação)</span></div>
+                                        <div class="dcec-horario text-yellow-400 text-xs mb-1"><i class="fas fa-clock mr-1"></i> Quartas às 20h</div>
+                                        <div class="dcec-contato text-gray-400 text-xs"><i class="fas fa-phone-alt mr-1"></i> Ronaldo: 41 99631-0041 &bull; Sônia: 41 99631-0056</div>
+                                      </div>
+                                      <div class="dcec-card bg-gray-800 rounded-lg p-4 mb-2 shadow">
+                                        <div class="dcec-nome font-semibold text-yellow-300 mb-1"><i class="fas fa-home mr-1"></i> Júnior e Fer</div>
+                                        <div class="dcec-endereco text-gray-200 text-sm mb-1"><i class="fas fa-map-marker-alt mr-1"></i> Rua senador Acioly filho 397, conj. Urano - Afonso Pena</div>
+                                        <div class="dcec-horario text-yellow-400 text-xs mb-1"><i class="fas fa-clock mr-1"></i> Quarta às 20h</div>
+                                        <div class="dcec-contato text-gray-400 text-xs"><i class="fas fa-phone-alt mr-1"></i> Júnior: 41 99954-0196 &bull; Fer: 47 99741-2031</div>
+                                      </div>
+                                      <div class="dcec-card bg-gray-800 rounded-lg p-4 mb-2 shadow">
+                                        <div class="dcec-nome font-semibold text-yellow-300 mb-1"><i class="fas fa-home mr-1"></i> João e Gabi</div>
+                                        <div class="dcec-endereco text-gray-200 text-sm mb-1"><i class="fas fa-map-marker-alt mr-1"></i> Rua Tenente Djalma Dutra 1160, Centro</div>
+                                        <div class="dcec-horario text-yellow-400 text-xs mb-1"><i class="fas fa-clock mr-1"></i> Quarta às 20h</div>
+                                        <div class="dcec-contato text-gray-400 text-xs"><i class="fas fa-phone-alt mr-1"></i> João: 41 99700-1443 &bull; Gabi: 41 99927-3969</div>
+                                      </div>
+                                      <div class="dcec-card bg-gray-800 rounded-lg p-4 mb-2 shadow">
+                                        <div class="dcec-nome font-semibold text-yellow-300 mb-1"><i class="fas fa-home mr-1"></i> Thiago e Julisa</div>
+                                        <div class="dcec-endereco text-gray-200 text-sm mb-1"><i class="fas fa-map-marker-alt mr-1"></i> Rua Salomão Miguel Nasser, 731 bl 38 Ap 01 Condomínio Vila Bela - Guatupê</div>
+                                        <div class="dcec-horario text-yellow-400 text-xs mb-1"><i class="fas fa-clock mr-1"></i> Quarta às 20h</div>
+                                        <div class="dcec-contato text-gray-400 text-xs"><i class="fas fa-phone-alt mr-1"></i> Thiago: 41 99266-1592 &bull; Julisa: 41 99143-7226</div>
+                                      </div>
+                                      <div class="dcec-card bg-gray-800 rounded-lg p-4 mb-2 shadow">
+                                        <div class="dcec-nome font-semibold text-yellow-300 mb-1"><i class="fas fa-home mr-1"></i> Cleberson e Mari</div>
+                                        <div class="dcec-endereco text-gray-200 text-sm mb-1"><i class="fas fa-map-marker-alt mr-1"></i> Rua: Moisés Cabral Monteiro 302 casa 27, São Judas Tadeu</div>
+                                        <div class="dcec-horario text-yellow-400 text-xs mb-1"><i class="fas fa-clock mr-1"></i> Quarta às 20h</div>
+                                        <div class="dcec-contato text-gray-400 text-xs"><i class="fas fa-phone-alt mr-1"></i> Cleberson: 41 99651-4906 &bull; Mari: 41 99949-1020</div>
+                                      </div>
+                                      <div class="dcec-card bg-gray-800 rounded-lg p-4 mb-2 shadow">
+                                        <div class="dcec-nome font-semibold text-yellow-300 mb-1"><i class="fas fa-home mr-1"></i> Alexandre e Thais</div>
+                                        <div class="dcec-endereco text-gray-200 text-sm mb-1"><i class="fas fa-map-marker-alt mr-1"></i> Rua: juíz Danilo Bertolin Précoma 451 AP 304, Cidade Jardim</div>
+                                        <div class="dcec-horario text-yellow-400 text-xs mb-1"><i class="fas fa-clock mr-1"></i> Quarta às 20h</div>
+                                        <div class="dcec-contato text-gray-400 text-xs"><i class="fas fa-phone-alt mr-1"></i> Ale: (41)98733-8668 &bull; Thaís: (41)98493-7426</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="dcec-section-group flex-1 min-w-[260px]">
+                                    <div class="dcec-section-label text-xl font-bold text-yellow-400 mb-4 text-center md:text-left">Sábados</div>
+                                    <div class="dcec-cards flex flex-col gap-4">
+                                      <div class="dcec-card bg-gray-800 rounded-lg p-4 mb-2 shadow">
+                                        <div class="dcec-nome font-semibold text-yellow-300 mb-1"><i class="fas fa-home mr-1"></i> Chris e Hyara</div>
+                                        <div class="dcec-endereco text-gray-200 text-sm mb-1"><i class="fas fa-map-marker-alt mr-1"></i> Rua governador Mário Covas 140- habitat (Aviação)</div>
+                                        <div class="dcec-horario text-yellow-400 text-xs mb-1"><i class="fas fa-clock mr-1"></i> Sábado às 18:00h</div>
+                                        <div class="dcec-contato text-gray-400 text-xs"><i class="fas fa-phone-alt mr-1"></i> Christofer: 41 99920-5650 &bull; Hyara: 41 99726-3658</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="flex justify-center mt-6">
+                                  <button id="btn-mapa-dcec" class="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-bold rounded-lg shadow-md transition duration-300 flex items-center gap-2">
+                                    <i class="fas fa-map-marked-alt"></i> Ver todos no mapa
+                                  </button>
+                                </div>
+                                <div id="mapa-dcec" class="hidden mt-8 w-full flex justify-center">
+                                  <iframe id="iframe-mapa-dcec" src="https://www.google.com/maps?q=São+José+dos+Pinhais,+PR&output=embed" width="100%" height="400" style="border:0; border-radius:1.2rem; box-shadow:0 4px 32px #ffd70033; max-width:700px; min-width:280px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                            <button onclick="toggleDcecInfo()" class="fixed top-1.5 right-2.5 z-[100] bg-yellow-500 hover:bg-yellow-600 text-black text-3xl font-bold rounded-full shadow-lg w-12 h-12 flex items-center justify-center transition duration-200 focus:outline-none dcec-close-global" aria-label="Fechar Modal DCEC" style="box-shadow:0 4px 32px #ffd70033;">
+                              <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Event Card 3 -  Impacto -->
+                    <div class="bg-gray-800 p-6 rounded-element shadow-md flex flex-col h-full">
+                        <div class="relative w-full h-56 mb-4 overflow-hidden rounded-element">
+                            <img src="impacto.jpeg" alt="Impacto" class="w-full h-full object-cover object-center scale-105 brightness-115 contrast-120 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Impacto</h3>
+                        <p class="text-gray-300 mb-2">Data: Em breve</p>
+                        <p class="text-gray-400 text-sm mb-4">Três dias de imersão bíblica.</p>
+                        <a href="#" class="mt-auto px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-black font-medium rounded-lg transition duration-300 rounded-element">Saiba Mais</a>
+                    </div>
+                    <!-- Event Card 4 - Placeholder para futuro evento -->
+                    <div class="bg-gray-800 p-6 rounded-element shadow-md flex flex-col h-full">
+                        <img src="https://placehold.co/400x200/2d3748/ffd700?text=NOVO+EVENTO" alt="Novo Evento" class="w-full h-40 object-cover rounded-element mb-4">
+                        <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Novo Evento em Breve!</h3>
+                        <p class="text-gray-300 mb-2">Fique ligado para mais informações.</p>
+                        <p class="text-gray-400 text-sm mb-4">Preparamos algo especial para você!</p>
+                        <a href="#" class="mt-auto px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-black font-medium rounded-lg transition duration-300 rounded-element">Verificar Atualizações</a>
+                    </div>
+                    <!-- Event Card 5 - Impulso -->
+                    <div class="bg-gray-800 p-6 rounded-element shadow-md flex flex-col h-full">
+                      <div class="relative w-full h-56 mb-4 overflow-hidden rounded-element">
+                        <img src="https://placehold.co/400x256/2d3748/ffd700?text=IMPULSO" alt="Impulso" class="w-full h-full object-cover object-center scale-105 brightness-110 contrast-110 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                      </div>
+                      <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Impulso</h3>
+                      <p class="text-gray-300 mb-2">Sábados, 18h00</p>
+                      <p class="text-gray-400 text-sm mb-4">Culto de adolescentes (14-17 anos). Um tempo de alegria, amizade e crescimento com Deus!</p>
+                      <span class="text-yellow-400 text-xs mb-2"><i class="fas fa-map-marker-alt mr-1"></i>R. Menino Jesus, 364 - Parque da Fonte, SJP</span>
+                      <a href="#contato" class="mt-auto px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-black font-medium rounded-lg transition duration-300 rounded-element">Quero saber mais</a>
+                    </div>
+                    <!-- Event Card 6 - Te Vejo na Casa -->
+                    <div class="bg-gray-800 p-6 rounded-element shadow-md flex flex-col h-full">
+                      <div class="relative w-full h-56 mb-4 overflow-hidden rounded-element">
+                        <img src="https://placehold.co/400x256/2d3748/ffd700?text=TE+VEJO+NA+CASA" alt="Te Vejo na Casa" class="w-full h-full object-cover object-center scale-105 brightness-110 contrast-110 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                      </div>
+                      <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Te Vejo na Casa</h3>
+                      <p class="text-gray-300 mb-2">Toda primeira quarta-feira do mês, 20h00</p>
+                      <p class="text-gray-400 text-sm mb-4">Todos os grupos "De Casa em Casa" se reúnem juntos na igreja para uma noite especial de comunhão, adoração e unidade!</p>
+                      <span class="text-yellow-400 text-xs mb-2"><i class="fas fa-map-marker-alt mr-1"></i>R. Menino Jesus, 364 - Parque da Fonte, SJP</span>
+                      <a href="#contato" class="mt-auto px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-black font-medium rounded-lg transition duration-300 rounded-element">Quero participar</a>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <a href="#" class="inline-block px-8 py-4 bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-lg rounded-full shadow-xl transition transform hover:scale-105 duration-300 rounded-element">
+                        Ver Todos os Eventos
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="bg-black text-white section-padding mt-20 mb-20">
+            <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-start">
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-bold text-yellow-400 mb-6">Fale Conosco</h2>
+                    <p class="text-lg leading-relaxed mb-4">
+                        Estamos sempre disponíveis para atendê-lo. Sinta-se à vontade para nos visitar ou entrar em contato através das informações abaixo:
+                    </p>
+                    <div class="space-y-4">
+                        <p class="flex items-center text-lg"><i class="fas fa-map-marker-alt text-yellow-400 mr-3"></i>R. Menino Jesus, 364 - Parque da Fonte, São José dos Pinhais - PR, 83050-632</p>
+                        <p class="flex items-center text-lg"><i class="fas fa-phone-alt text-yellow-400 mr-3"></i>(41) 9XXXX-XXXX (Telefone de contato)</p>
+                        <p class="flex items-center text-lg"><i class="fas fa-envelope text-yellow-400 mr-3"></i>contato@igrejacasaatos.com</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Rua+Menino+Jesus%2C+364%2C+Parque+da+Fonte%2C+S%C3%A3o+Jos%C3%A9+dos+Pinhais%2C+PR%2C+83050-632" target="_blank" class="inline-block px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-lg shadow-md transition duration-300 rounded-element">
+                        Ver no Google Maps
+                    </a>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-gray-900 p-8 rounded-element shadow-lg">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-6">Envie-nos uma Mensagem</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Nome Completo</label>
+                            <input type="text" id="name" name="name" class="shadow appearance-none border rounded-element w-full py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Seu nome">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded-element w-full py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="seuemail@exemplo.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-200 text-sm font-bold mb-2">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded-element w-full py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Sua mensagem"></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-bold rounded-lg shadow-md transition duration-300 rounded-element">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <!-- Apenas Instagram, com link real -->
+                <a href="https://www.instagram.com/igrejacasaatos/" target="_blank" class="text-yellow-400 hover:text-yellow-200 transition duration-300" aria-label="Instagram"><i class="fab fa-instagram text-2xl"></i></a>
+                <a href="https://www.youtube.com/@casaatos" target="_blank" class="text-yellow-400 hover:text-yellow-200 transition duration-300" aria-label="YouTube"><i class="fab fa-youtube text-2xl"></i></a>
+            </div>
+            <p class="text-gray-400 text-sm mb-2">Igreja Casa Atos - R. Menino Jesus, 364 - Parque da Fonte, São José dos Pinhais - PR, 83050-632</p>
+            <p class="text-gray-400 text-sm">&copy; 2025 Igreja Casa Atos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal para Contribuição -->
+    <div id="contribua-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80">
+        <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl max-w-md w-full relative border-4 border-yellow-500 flex flex-col items-center">
+            <button onclick="document.getElementById('contribua-modal').classList.add('hidden')" class="absolute top-4 right-4 text-yellow-400 hover:text-yellow-200 text-2xl font-bold focus:outline-none" aria-label="Fechar">&times;</button>
+            <h2 class="text-2xl font-bold text-yellow-400 mb-6 text-center">Contribua Financeiramente</h2>
+            <div class="w-full flex flex-col gap-6">
+                <div class="bg-yellow-100 rounded-xl p-4 flex flex-col items-center shadow-md">
+                    <span class="font-bold text-yellow-700 text-lg mb-2"><i class="fas fa-qrcode mr-2"></i>PIX</span>
+                    <span class="text-yellow-900 text-sm mb-2">Chave: <b>COLOCAR CHAVE</b></span>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=igreja.casa.atos@gmail.com" alt="QR Code PIX" class="rounded-lg border-2 border-yellow-400 bg-white p-1">
+                </div>
+                <div class="bg-yellow-100 rounded-xl p-4 flex flex-col items-center shadow-md">
+                    <span class="font-bold text-yellow-700 text-lg mb-2"><i class="fas fa-credit-card mr-2"></i>CARTÃO</span>
+                    <span class="text-yellow-900 text-sm mb-2">Entre em contato para contribuir via cartão de crédito/débito.</span>
+                    <a href="https://wa.me/5541997001443" target="_blank" class="mt-2 px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-black rounded-lg font-semibold shadow">Falar com Tesouraria</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
